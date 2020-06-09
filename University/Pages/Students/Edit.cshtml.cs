@@ -13,9 +13,9 @@ namespace University.Pages.Students
 {
     public class EditModel : PageModel
     {
-        private readonly University.Data.SchoolContext _context;
+        private readonly University.Data.ApplicationDbContext _context;
 
-        public EditModel(University.Data.SchoolContext context)
+        public EditModel(University.Data.ApplicationDbContext context)
         {
             _context = context;
         }

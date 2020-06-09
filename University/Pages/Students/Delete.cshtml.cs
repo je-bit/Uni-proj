@@ -12,9 +12,9 @@ namespace University.Pages.Students
 {
     public class DeleteModel : PageModel
     {
-        private readonly University.Data.SchoolContext _context;
+        private readonly University.Data.ApplicationDbContext _context;
 
-        public DeleteModel(University.Data.SchoolContext context)
+        public DeleteModel(University.Data.ApplicationDbContext context)
         {
             _context = context;
         }

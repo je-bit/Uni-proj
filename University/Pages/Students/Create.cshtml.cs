@@ -12,9 +12,9 @@ namespace University.Pages.Students
 {
     public class CreateModel : PageModel
     {
-        private readonly University.Data.SchoolContext _context;
+        private readonly University.Data.ApplicationDbContext _context;
 
-        public CreateModel(University.Data.SchoolContext context)
+        public CreateModel(University.Data.ApplicationDbContext context)
         {
             _context = context;
         }

@@ -12,9 +12,9 @@ namespace University.Pages.Students
 {
     public class IndexModel : PageModel
     {
-        private readonly University.Data.SchoolContext _context;
+        private readonly University.Data.ApplicationDbContext _context;
 
-        public IndexModel(University.Data.SchoolContext context)
+        public IndexModel(University.Data.ApplicationDbContext context)
         {
             _context = context;
         }
