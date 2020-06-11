@@ -33,6 +33,7 @@ namespace University
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
+            services.AddControllersWithViews();
 
             //services.AddDbContext<SchoolContext>(options =>
             //        options.UseSqlServer(Configuration.GetConnectionString("SchoolContext")));
@@ -63,6 +64,9 @@ namespace University
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

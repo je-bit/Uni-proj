@@ -139,11 +139,6 @@ D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Ra
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Students\Edit.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Students\Index.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\About.cshtml.g.cs
-D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Courses\Create.cshtml.g.cs
-D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Courses\Delete.cshtml.g.cs
-D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Courses\Details.cshtml.g.cs
-D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Courses\Edit.cshtml.g.cs
-D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Courses\Index.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Instructors\Create.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Instructors\Delete.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Instructors\Details.cshtml.g.cs
@@ -154,3 +149,13 @@ D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Ra
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Departments\Details.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Departments\Edit.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Departments\Index.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Courses\Index.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Courses\Create.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Courses\Edit.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Courses\Delete.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Courses\Details.cshtml.g.cs
