@@ -144,11 +144,6 @@ D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Ra
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Instructors\Details.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Instructors\Edit.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Instructors\Index.cshtml.g.cs
-D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Departments\Create.cshtml.g.cs
-D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Departments\Delete.cshtml.g.cs
-D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Departments\Details.cshtml.g.cs
-D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Departments\Edit.cshtml.g.cs
-D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Departments\Index.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Courses\Index.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -159,3 +154,8 @@ D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Ra
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Courses\Edit.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Courses\Delete.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Courses\Details.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Departments\Create.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Departments\Delete.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Departments\Details.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Departments\Edit.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Departments\Index.cshtml.g.cs

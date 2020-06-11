@@ -1,0 +1,63 @@
+﻿@model IList<Department> 
+
+@{
+    ViewData["Title"] = "Departments";
+}
+
+<h2>Departments</h2>
+
+<p>
+    <a asp-area="" asp-controller="Departments" asp-action="Create">Create New</a>
+</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].Budget)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].StartDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].RowVersion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].Administrator)
+                </th>
+                <th>
+                    RowVersion
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Budget)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StartDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Administrator.FullName)
+                    </td>
+                    <td>
+                        @item.RowVersion[7]
+                    </td>
+                    <td>
+                        <a asp-controller="Departments" asp-action="Edit" asp-route-id="@item.DepartmentID">Edit</a> |
+                        <a asp-controller="Departments" asp-action="Details" asp-route-id="@item.DepartmentID">Details</a> |
+                        <a asp-controller="Departments" asp-action="Delete" asp-route-id="@item.DepartmentID">Delete</a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
