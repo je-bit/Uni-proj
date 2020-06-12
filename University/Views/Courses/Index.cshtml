@@ -5,10 +5,12 @@
 }
 
 <h1>Courses</h1>
-
-<p>
-    <a asp-area="" asp-controller="Courses" asp-action="Create">Create New</a>
-</p>
+@if (User.IsInRole("Administrator"))
+{
+    <p>
+        <a asp-area="" asp-controller="Courses" asp-action="Create">Create New</a>
+    </p>
+}
 <table class="table">
     <thead>
         <tr>
@@ -43,10 +45,16 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Department.Name)
                 </td>
+
                 <td>
-                    <a asp-controller="Courses" asp-action="Edit" asp-route-id="@item.CourseID">Edit</a> |
-                    <a asp-controller="Courses" asp-action="Details" asp-route-id="@item.CourseID">Details</a> |
-                    <a asp-controller="Courses" asp-action="Delete" asp-route-id="@item.CourseID">Delete</a>
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <a asp-controller="Courses" asp-action="Edit" asp-route-id="@item.CourseID">Edit</a>
+                        <a asp-controller="Courses" asp-action="Delete" asp-route-id="@item.CourseID">Delete</a>
+                    }
+
+                    <a asp-controller="Courses" asp-action="Details" asp-route-id="@item.CourseID">Details</a>
+
                 </td>
             </tr>
         }

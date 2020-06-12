@@ -158,3 +158,4 @@ D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Ra
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Students\Index.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Shared\_LoginPartial.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs

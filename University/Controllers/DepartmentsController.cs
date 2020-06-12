@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using University.Models;
 
 namespace University.Controllers
 {
+    [Authorize]
     public class DepartmentsController : Controller
     {
         private readonly University.Data.ApplicationDbContext _context;
@@ -30,6 +32,7 @@ namespace University.Controllers
             return View(departments);
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpGet]
         public IActionResult Create()
         {
@@ -39,7 +42,9 @@ namespace University.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Department model)
         {
             if (!this.ModelState.IsValid)
@@ -72,7 +77,9 @@ namespace University.Controllers
             return RedirectToAction("Index", "Departments");
         }
 
-        [HttpGet]
+        [Authorize(Roles = "Administrator")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id)
         {
             var instructors = _context.Instructors.ToList();
@@ -86,7 +93,10 @@ namespace University.Controllers
 
             return View(department);
         }
+
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id)
         {
             if (!this.ModelState.IsValid)
@@ -130,7 +140,9 @@ namespace University.Controllers
 
         }
 
-        [HttpGet]
+        [Authorize(Roles = "Administrator")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int? id)
         {
             var department = await _context.Departments
@@ -140,7 +152,9 @@ namespace University.Controllers
 
             return View(department);
         }
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(Department model)
         {
             if (!this.ModelState.IsValid)
