@@ -4,7 +4,7 @@
     ViewData["Title"] = "Departments";
 }
 
-<h2>Departments</h2>
+<h2 style="font-family:Georgia;"><u>Departments</u></h2>
 
 @if (User.IsInRole("Administrator"))
 {
@@ -12,7 +12,7 @@
         <a asp-area="" asp-controller="Courses" asp-action="Create">Create New</a>
     </p>
 }
-<table class="table">
+<table class="table" style="font-family:Georgia;">
     <thead>
         <tr>
             <th>

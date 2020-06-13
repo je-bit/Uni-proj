@@ -5,11 +5,11 @@
     var courses = (Course[])ViewData["courses"];
 }
   
-<h1>Create</h1>
+<h1 style="font-family:Georgia;">Create</h1>
 
-<h4>Instructor</h4>
+<h4 style="font-family:Georgia;"><u>Instructor</u></h4>
 <hr />
-<div class="row">
+<div class="row" style="font-family:Georgia;">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -29,7 +29,7 @@
                 <span asp-validation-for="Instructor.HireDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Location" class="control-label">Location</label>
+                <label asp-for="Location" class="control-label"> Office Location</label>
                 <input asp-for="Location" class="form-control" />
                 <span asp-validation-for="Location" class="text-danger" />
             </div>

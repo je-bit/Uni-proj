@@ -6,15 +6,15 @@
     Enrollment[] courseEnrollments = (Enrollment[])ViewData["courseEnrollments"];
 }
 
-<h2>Instructors</h2>
+<h2 style="font-family:Georgia;"><u>Instructors</u></h2>
 
 <p>
     <a asp-area="" asp-controller="Instructors" asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table" style="font-family:Georgia;">
     <thead>
         <tr>
-            <th>First Name</th>
+            <th >First Name</th>
             <th>Last Name</th>
             <th>Hire Date</th>
             <th>Office</th>
@@ -55,7 +55,7 @@
                     }
                 </td>
                 <td>
-                    <a asp-controller="Instructors" asp-action="Index" asp-route-id="@item.ID">Select</a>
+                    <a asp-controller="Instructors" asp-action="Index" asp-route-id="@item.ID">Select</a> |
                     <a asp-controller="Instructors" asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
                     <a asp-controller="Instructors" asp-action="Details" asp-route-id="@item.ID">Details</a> |
                     <a asp-controller="Instructors" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
@@ -67,8 +67,8 @@
 
 @if (currentInstructor?.CourseAssignments != null)
 {
-    <h3>Courses Taught by Selected Instructor</h3>
-    <table class="table">
+    <h3 style="font-family:Georgia;"><u>Courses Taught by Selected Instructor</u></h3>
+    <table class="table" style="font-family:Georgia;">
         <tr>
             <th></th>
             <th>Number</th>
@@ -104,10 +104,10 @@
 
 @if (courseEnrollments != null)
 {
-    <h3>
-        Students Enrolled in Selected Course
+    <h3 style="font-family:Georgia;">
+        <u>Students Enrolled in Selected Course</u>
     </h3>
-    <table class="table">
+    <table class="table" style="font-family:Georgia;">
         <tr>
             <th>Name</th>
             <th>Grade</th>
