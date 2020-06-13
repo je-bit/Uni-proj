@@ -28,20 +28,27 @@ using University.Models;
 #nullable disable
 #nullable restore
 #line 3 "D:\Уни\dotNet Core - project\University\University\Views\_ViewImports.cshtml"
-using University.Data;
+using University.Models.SchoolViewModels;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 4 "D:\Уни\dotNet Core - project\University\University\Views\_ViewImports.cshtml"
+using University.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "D:\Уни\dotNet Core - project\University\University\Views\_ViewImports.cshtml"
 using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cb3c58be487be4ca9a6cf94452c4a8d31b326882", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3df43259dfdc1558d5d17e13fc483cfab56f0887", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

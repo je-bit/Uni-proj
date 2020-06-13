@@ -31,17 +31,15 @@ namespace University
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddAuthentication();
-
-            services
-                .AddIdentity<IdentityUser, IdentityRole>()
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultUI()
-                .AddDefaultTokenProviders();
+                .AddRoles<IdentityRole>();
 
             services.AddRazorPages();
             services.AddControllersWithViews();
 
+            //services.AddDbContext<SchoolContext>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("SchoolContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

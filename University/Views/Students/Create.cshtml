@@ -4,16 +4,6 @@
     ViewData["Title"] = "Create";
 }
 
-@*@{
-    var departments = ViewData["Departments"] as IEnumerable<Department>;
-    IEnumerable<SelectListItem> departmentsSelectList = null;
-    if (departments != null)
-    {
-        departmentsSelectList = departments.Select(ec => new SelectListItem() { Text = ec.Name, Value = ec.DepartmentID.ToString() });
-    }
-}*@
-
-
 <h1>Create</h1>
 
 <h4>Student</h4>

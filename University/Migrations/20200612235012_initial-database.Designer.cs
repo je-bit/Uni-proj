@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using University.Data;
 
-namespace University.Data.Migrations
+namespace University.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200609220637_RowVersion")]
-    partial class RowVersion
+    [Migration("20200612235012_initial-database")]
+    partial class initialdatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -277,7 +277,8 @@ namespace University.Data.Migrations
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate();
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("rowversion");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");

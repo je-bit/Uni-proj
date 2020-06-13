@@ -34,7 +34,6 @@ D:\Уни\dotNet Core - project\University\University\bin\Debug\netcoreapp3.0\ru
 D:\Уни\dotNet Core - project\University\University\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Уни\dotNet Core - project\University\University\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Уни\dotNet Core - project\University\University\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\University.csprojAssemblyReference.cache
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\University.RazorAssemblyInfo.cache
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\University.RazorAssemblyInfo.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\University.AssemblyInfoInputs.cache
@@ -44,7 +43,6 @@ D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Un
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\University.RazorCoreGenerate.cache
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Error.cshtml.g.cs
-D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Index.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\Privacy.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\_ViewImports.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Pages\_ViewStart.cshtml.g.cs
@@ -159,3 +157,4 @@ D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Ra
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Shared\_LoginPartial.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs
+D:\Уни\dotNet Core - project\University\University\obj\Debug\netcoreapp3.0\University.csprojAssemblyReference.cache

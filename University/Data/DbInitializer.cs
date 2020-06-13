@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
 using University.Models;
 
 namespace University.Data
@@ -10,8 +12,7 @@ namespace University.Data
     {
         public static void Initialize(ApplicationDbContext context)
         {
-
-            bool isDatabaseAllreadySeeded = context.Students.Any() &&
+            bool isDatabaseAllreadySeeded =  context.Students.Any() &&
                 context.Courses.Any() &&
                 context.Enrollments.Any();
 

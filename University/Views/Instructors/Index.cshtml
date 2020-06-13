@@ -1,13 +1,15 @@
-﻿@*@model IList<Instructor>
+﻿@model IList<Instructor>
 
 @{
     ViewData["Title"] = "Instructors";
+    var currentInstructor = (Instructor)ViewData["instructor"] ?? null;
+    Enrollment[] courseEnrollments = (Enrollment[])ViewData["courseEnrollments"];
 }
 
 <h2>Instructors</h2>
 
 <p>
-    <a asp-area="" asp-controller="Courses" asp-action="Create">Create New</a>
+    <a asp-area="" asp-controller="Instructors" asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -23,11 +25,11 @@
     <tbody>
         @foreach (var item in Model)
         {
-            //string selectedRow = "";
-            //if (item.ID == Model.InstructorID)
-            //{
-            //    selectedRow = "table-success";
-            //}
+            string selectedRow = "";
+            if (item.ID == currentInstructor?.ID)
+            {
+                selectedRow = "table-success";
+            }
             <tr class="@selectedRow">
                 <td>
                     @Html.DisplayFor(modelItem => item.FirstMidName)
@@ -53,17 +55,17 @@
                     }
                 </td>
                 <td>
-                    <a asp-controller="Instructors" asp-action="Select" asp-route-id="@item.InstructorID">Select</a>
-                    <a asp-controller="Instructors" asp-action="Edit" asp-route-id="@item.InstructorID">Edit</a> |
-                    <a asp-controller="Instructors" asp-action="Details" asp-route-id="@item.InstructorID">Details</a> |
-                    <a asp-controller="Instructors" asp-action="Delete" asp-route-id="@item.InstructorID">Delete</a>
+                    <a asp-controller="Instructors" asp-action="Index" asp-route-id="@item.ID">Select</a>
+                    <a asp-controller="Instructors" asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-controller="Instructors" asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-controller="Instructors" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
 
-@if (Model.InstructorData.Courses != null)
+@if (currentInstructor?.CourseAssignments != null)
 {
     <h3>Courses Taught by Selected Instructor</h3>
     <table class="table">
@@ -74,25 +76,25 @@
             <th>Department</th>
         </tr>
 
-        @foreach (var item in Model.InstructorData.Courses)
+        @foreach (var item in currentInstructor.CourseAssignments)
         {
             string selectedRow = "";
-            if (item.CourseID == Model.CourseID)
+            if (item.CourseID == courseEnrollments?[0]?.CourseID)
             {
                 selectedRow = "table-success";
             }
             <tr class="@selectedRow">
                 <td>
-                    <a asp-page="./Index" asp-route-courseID="@item.CourseID">Select</a>
+                    <a asp-controller="Instructors" asp-action="Index" asp-route-courseID="@item.CourseID">Select</a>
                 </td>
                 <td>
                     @item.CourseID
                 </td>
                 <td>
-                    @item.Title
+                    @item.Course.Title
                 </td>
                 <td>
-                    @item.Department.Name
+                    @item.Course.Department.Name
                 </td>
             </tr>
         }
@@ -100,7 +102,7 @@
     </table>
 }
 
-@if (Model.InstructorData.Enrollments != null)
+@if (courseEnrollments != null)
 {
     <h3>
         Students Enrolled in Selected Course
@@ -110,7 +112,7 @@
             <th>Name</th>
             <th>Grade</th>
         </tr>
-        @foreach (var item in Model.InstructorData.Enrollments)
+        @foreach (var item in courseEnrollments)
         {
             <tr>
                 <td>
@@ -122,4 +124,4 @@
             </tr>
         }
     </table>
-}*@
+}
