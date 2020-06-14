@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using University.Models;
@@ -10,6 +11,7 @@ using University.Models;
 
 namespace University.Controllers
 {
+    [Authorize]
     public class StudentsController : Controller
     {
         private readonly University.Data.ApplicationDbContext _context;
@@ -40,13 +42,16 @@ namespace University.Controllers
             return View(students);
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Student model)
         {
             if (!this.ModelState.IsValid)
@@ -60,7 +65,9 @@ namespace University.Controllers
             return RedirectToAction("Index", "Students");
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpGet]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id)
         {
             var student = await _context.Students.FindAsync(id);
@@ -68,7 +75,9 @@ namespace University.Controllers
             return View(student);
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Student model)
         {
             if (!this.ModelState.IsValid)
@@ -96,7 +105,9 @@ namespace University.Controllers
 
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpGet]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
             var student = await _context.Students
@@ -106,7 +117,9 @@ namespace University.Controllers
             return View(student);
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(Student model)
         {
             var student = await _context.Students.FindAsync(model.ID);

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using University.Models;
@@ -10,6 +11,7 @@ using University.Models.SchoolViewModels;
 
 namespace University.Controllers
 {
+    [Authorize]
     public class InstructorsController : Controller
     {
         private readonly University.Data.ApplicationDbContext _context;
@@ -56,6 +58,7 @@ namespace University.Controllers
             return View(instructors);
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpGet]
         public IActionResult Create()
         {
@@ -66,7 +69,9 @@ namespace University.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(CreateInstructor model)
         {
             if (!this.ModelState.IsValid)
@@ -111,7 +116,9 @@ namespace University.Controllers
             return RedirectToAction("Index", "Instructors");
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpGet]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id)
         {
             var courses = _context.Courses.ToArray();
@@ -134,7 +141,9 @@ namespace University.Controllers
             return View(newCreateInstructor);
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Edit(CreateInstructor model)
         {
             var instructor = _context.Instructors.FirstOrDefault(i => i.ID == model.Instructor.ID);
@@ -196,7 +205,9 @@ namespace University.Controllers
             return RedirectToAction("Index", "Instructors");
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpGet]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int? id)
         {
             var instructors = await _context.Instructors
@@ -206,7 +217,9 @@ namespace University.Controllers
             return View(instructors);
         }
 
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Delete(Instructor model)
         {
             var instructor = _context.Instructors.FirstOrDefault(i => i.ID == model.ID);

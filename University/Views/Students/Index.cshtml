@@ -57,9 +57,13 @@
                     @Html.DisplayFor(modelItem => item.EnrollmentDate)
                 </td>
                 <td>
-                    <a asp-controller="Students" asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+
                     <a asp-controller="Students" asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-controller="Students" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <a asp-controller="Courses" asp-action="Edit" asp-route-id="@item.ID">Edit</a> 
+                        <a asp-controller="Courses" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    }
                 </td>
             </tr>
         }

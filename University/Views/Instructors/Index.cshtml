@@ -14,7 +14,7 @@
 <table class="table" style="font-family:Georgia;">
     <thead>
         <tr>
-            <th >First Name</th>
+            <th>First Name</th>
             <th>Last Name</th>
             <th>Hire Date</th>
             <th>Office</th>
@@ -56,9 +56,12 @@
                 </td>
                 <td>
                     <a asp-controller="Instructors" asp-action="Index" asp-route-id="@item.ID">Select</a> |
-                    <a asp-controller="Instructors" asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
                     <a asp-controller="Instructors" asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-controller="Instructors" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <a asp-controller="Courses" asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                        <a asp-controller="Courses" asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    }
                 </td>
             </tr>
         }
