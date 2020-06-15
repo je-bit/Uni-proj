@@ -11,7 +11,6 @@ using University.Models;
 
 namespace University.Controllers
 {
-    [Authorize]
     public class CoursesController : Controller
     {
         private readonly University.Data.ApplicationDbContext _context;
@@ -22,6 +21,7 @@ namespace University.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles ="Administrator")]
         public async Task<IActionResult> Index()
         {
           var courses = await _context.Courses
@@ -31,6 +31,7 @@ namespace University.Controllers
 
             return View(courses);
         }
+
         [Authorize(Roles = "Administrator")]
         [HttpGet]
         public IActionResult Create()
@@ -40,6 +41,7 @@ namespace University.Controllers
             this.ViewData["Departments"] = departments;
             return View();
         }
+
         [Authorize(Roles = "Administrator")]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -74,9 +76,8 @@ namespace University.Controllers
             return RedirectToAction("Index", "Courses");
         }
 
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles ="Administrator")]
         [HttpGet]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id)
         {
             var departments = _context.Departments.ToList();
@@ -122,7 +123,6 @@ namespace University.Controllers
 
         [Authorize(Roles = "Administrator")]
         [HttpGet]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int? id)
         {
             var course = await _context.Courses

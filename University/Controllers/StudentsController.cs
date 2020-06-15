@@ -67,7 +67,6 @@ namespace University.Controllers
 
         [Authorize(Roles = "Administrator")]
         [HttpGet]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id)
         {
             var student = await _context.Students.FindAsync(id);
@@ -107,7 +106,6 @@ namespace University.Controllers
 
         [Authorize(Roles = "Administrator")]
         [HttpGet]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
             var student = await _context.Students

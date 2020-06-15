@@ -78,8 +78,7 @@ namespace University.Controllers
         }
 
         [Authorize(Roles = "Administrator")]
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
             var instructors = _context.Instructors.ToList();
@@ -141,8 +140,7 @@ namespace University.Controllers
         }
 
         [Authorize(Roles = "Administrator")]
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpGet]
         public async Task<IActionResult> Delete(int? id)
         {
             var department = await _context.Departments

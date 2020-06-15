@@ -118,7 +118,6 @@ namespace University.Controllers
 
         [Authorize(Roles = "Administrator")]
         [HttpGet]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id)
         {
             var courses = _context.Courses.ToArray();
@@ -207,7 +206,6 @@ namespace University.Controllers
 
         [Authorize(Roles = "Administrator")]
         [HttpGet]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int? id)
         {
             var instructors = await _context.Instructors
